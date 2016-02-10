@@ -6,6 +6,7 @@ module app {
    * Configures the application (before running).
    */
   function mainConfig($provide: ng.auto.IProvideService,
+                      $compileProvider: ng.ICompileProvider,
                       config: any) {
 
     // Extend the $exceptionHandler service to output logs.
@@ -26,6 +27,9 @@ module app {
       }
       return $delegate;
     });
+
+    // Disable angular debug info in production version
+    $compileProvider.debugInfoEnabled(config.debug);
 
   }
 
