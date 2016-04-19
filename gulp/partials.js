@@ -26,6 +26,6 @@ gulp.task('partials', function() {
     .pipe(gulp.dest(conf.paths.tmp + '/partials/'));
 });
 
-gulp.task('partials:reload', ['translations'], function() {
+gulp.task('partials:reload', ['partials'], function() {
   browserSync.reload();
 });

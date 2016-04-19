@@ -33,12 +33,12 @@ sources/                project source code
 |- images/              project images
 |- libraries/           Bower dependencies
 |- main/                main module, for entry points and global style
-|  |- main.config.js    app configuration code
-|  |- main.constants.js app configuration constants
-|  |- main.module.js    app module definition
-|  |- main.routes.js    app routes
-|  |- main.run.js       app entry point
-|  |- main.wrappers.js  AngularJS module wrappers for external libraries
+|  |- main.config.ts    app configuration code
+|  |- main.constants.ts app configuration constants
+|  |- main.module.ts    app module definition
+|  |- main.routes.ts    app routes
+|  |- main.run.ts       app entry point
+|  |- main.wrappers.ts  AngularJS module wrappers for external libraries
 |  +- main.scss         style entry point
 |- modules/             project components and modules
 |  |- helpers/          helper services
@@ -70,6 +70,11 @@ test:auto   | Launch karma server and launch unit tests after each change in pro
 protractor  | Launch e2e tests using protractor.
 tsd         | Download and update all TypeScript definitions for Bower dependencies.
 
+When building the application, you can specify the target environment using the flag `--environment <name>`.
+
+The default build environment is `production`. See [this documentation](docs/build-environments.md) for more details
+about multiple build environments management.
+
 # Coding guides
 
 - [JavaScript](docs/coding-guides/javascript.md)
@@ -81,6 +86,7 @@ tsd         | Download and update all TypeScript definitions for Bower dependenc
 
 # Additional documentation
 
+- [Build environments](docs/build-environments.md)
 - [i18n](docs/i18n.md)
 - [Proxy configuration](docs/proxy.md)
 - [All gulp tasks](docs/tasks.md)
@@ -106,9 +112,8 @@ tsd         | Download and update all TypeScript definitions for Bower dependenc
 
 #### Build
 - JS+CSS+HTML bundling and minification ([useref](https://github.com/jonkemp/gulp-useref), 
-  [uglify](https://github.com/terinjokes/gulp-uglify), 
-  [htmlmin](https://github.com/jonschlinkert/gulp-htmlmin), 
-  [clean-css](https://www.npmjs.com/package/gulp-clean-css) 
+  [uglify](https://github.com/terinjokes/gulp-uglify), [htmlmin](https://github.com/jonschlinkert/gulp-htmlmin), 
+  [clean-css](https://www.npmjs.com/package/gulp-clean-css))
 - CSS browser support ([autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer))
 - Images optimization ([imagemin](https://github.com/sindresorhus/gulp-imagemin))
 - Automatic angular module annotation ([ngAnnotate](https://github.com/Kagami/gulp-ng-annotate))

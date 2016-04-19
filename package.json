@@ -1,13 +1,21 @@
 {
   "name": "starter-kit",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Web project starter kit including tooling, best practices and project seed",
-  "keywords": "angular, bootstrap, gulp, ui-router, ui-bootstrap, sass, typescript",
+  "keywords": [
+    "angular",
+    "bootstrap",
+    "gulp",
+    "ui-router",
+    "ui-bootstrap",
+    "sass",
+    "typescript"
+  ],
   "license": "MIT",
   "author": "Yohan Lasorsa",
   "repository": {
     "type": "git",
-    "url": "git@github.com/thales-poles-ra/starter-kit.git"
+    "url": "git@github.com/sinedied/starter-kit.git"
   },
   "scripts": {
     "test": "gulp test"
@@ -32,6 +40,7 @@
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "~2.4.0",
     "gulp-inject": "^4.0.0",
+    "gulp-intercept": "^0.1.0",
     "gulp-load-plugins": "~1.2.0",
     "gulp-ng-annotate": "^2.0.0",
     "gulp-protractor": "^2.2.0",
@@ -63,6 +72,7 @@
     "lodash": "^4.6.1",
     "main-bower-files": "~2.11.1",
     "merge-stream": "~1.0.0",
+    "minimist": "^1.2.0",
     "phantomjs-prebuilt": "^2.1.5",
     "protractor-html-screenshot-reporter": "0.0.21",
     "require-dir": "~0.3.0",

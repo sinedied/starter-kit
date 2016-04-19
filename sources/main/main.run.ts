@@ -26,6 +26,7 @@ module app {
     /**
      * Utility method to set the language in the tools requiring it.
      * The current language is saved to the local storage.
+     * If no parameter is specified, the language is loaded from local storage (if possible).
      * @param {string=} language The IETF language tag.
      */
     vm.setLanguage = function(language?: string) {
@@ -68,12 +69,12 @@ module app {
      */
     function init() {
       // Enable debug mode for translations
-      gettextCatalog.debug = config.debug;
+      gettextCatalog.debug = config.environment.debug;
 
       vm.setLanguage();
 
       // Set REST server configuration
-      restService.setServer(config.server);
+      restService.setServer(config.environment.server);
     }
 
     /**

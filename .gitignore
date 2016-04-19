@@ -6,14 +6,13 @@ node_modules/
 /.tmp/
 /dist/
 .sass-cache
-.idea/
 npm-debug.log
 
 ## Karma
 /reports/
 
 ## Mobile
-ionic.project
+/ionic.project
 /www/
 /plugins/
 /platforms/
@@ -24,7 +23,7 @@ ionic.project
 ## IntelliJ / Webstorm
 *.iml
 *.iws
-*.idea/*
+.idea/*
 !.idea/runConfigurations/
 !.idea/codeStyleSettings.xml
 

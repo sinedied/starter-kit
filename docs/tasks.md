@@ -1,4 +1,10 @@
-[Documentation](https://github.com/gulpjs/gulp/blob/master/docs/README.md)
+# Gulp
+
+The build system of this project is based on [Gulp](http://gulpjs.com), to automate the development and build workflow.
+
+The various tasks described here are defined in modules located in the `gulp/` folder. You can read more about how to
+customize them and define your own tasks in the
+[Gulp documentation](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md).
 
 ## Default command
 
@@ -17,6 +23,11 @@ serve      | Launch a web server with live reload and open app in browser.
 serve:dist | Launch a web server using dist files with live reload and open app in browser.
 build      | Build and optimize the current project, ready for deployment. This includes linting as well as image, script, stylesheet and HTML optimization and minification.
 clean      | Delete temporary files and dist files.
+
+When building the application, you can specify the target environment using the flag `--environment <name>`.
+
+The default build environment is `production`. See [this documentation](docs/build-environments.md) for more details
+about multiple build environments management.
 
 ## Tests
 
@@ -42,7 +53,7 @@ Task        | Description
 ------------|---------------------------------------------------------------------------------------------------------
 scripts     | Convert all *.ts found in project to js in the temporary folder.
 tsd         | Download and update all TypeScript definitions for Bower dependencies.
-tsd:restore | Download TypeScript definitions according to tsd.json
+tsd:restore | Download TypeScript definitions according to tsd.json.
 tsd:clean   | Delete downloaded TypeScript definitions.
 
 ## Build and assets
