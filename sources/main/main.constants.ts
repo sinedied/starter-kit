@@ -6,6 +6,7 @@ module app {
     version: string;
     environment: IApplicationEnvironment;
     supportedLanguages: Array<string>;
+    analyticsAccount: string;
   }
 
   export interface IApplicationEnvironment {
@@ -52,7 +53,11 @@ module app {
     supportedLanguages: [
       'en-US',
       'fr-FR'
-    ]
+    ],
+
+    // Google Analytics account. Leave null to not have any analytics active.
+    // Typical values take the form 'UA-########-1'.
+    analyticsAccount: null
 
   };
 

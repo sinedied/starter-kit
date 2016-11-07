@@ -23,7 +23,7 @@ npm-debug.log
 ## IntelliJ / WebStorm
 *.iml
 *.iws
-.idea/*
+.idea/
 !.idea/runConfigurations/
 !.idea/codeStyleSettings.xml
 
